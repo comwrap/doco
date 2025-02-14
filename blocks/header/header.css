@@ -245,7 +245,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections .default-content-wrapper > ul > li,
   header nav .nav-sections .default-content-wrapper > ul > li a {
-    color: var(--color-brand-500);
+    color: var(--color-neutral-900);
     font-weight: 500;
     cursor: pointer;
     font-size: 18px;
