@@ -273,6 +273,15 @@ h6 {
   letter-spacing: var(--type-headline-2-default-letter-spacing);
 }
 
+strong,
+u {
+  display: inline-block;
+}
+
+strong {
+  font-weight: 500;
+}
+
 p,
 dl,
 ol,
@@ -310,7 +319,7 @@ main pre {
 }
 
 main > div {
-  margin: var(--spacing-xbig) var(--spacing-small);
+  /* margin: var(--spacing-xbig) var(--spacing-small); */
 }
 
 input,
@@ -372,6 +381,27 @@ button.button:disabled:hover {
   cursor: unset;
 }
 
+main a.button.button-link,
+button.button.button-link {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: unset !important;
+  border: unset;
+  border-radius: unset;
+  color: var(--color-brand-500);
+  text-decoration: underline;
+  text-decoration-color: var(--color-brand-500);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+main a.button.button-link:hover,
+button.button.button-link:hover {
+  color: var(--color-brand-600);
+  text-decoration-color: var(--color-brand-600);
+}
+
 main a.button.secondary,
 button.button.secondary {
   background-color: unset;
@@ -382,6 +412,29 @@ button.button.secondary {
 main a.button.secondary:hover,
 button.button.secondary:hover {
   color: var(--color-brand-600)
+}
+
+main a.button.tertiary,
+button.button.tertiary {
+  padding: 0;
+  margin: 0;
+  background-color: unset;
+  border: unset;
+  border-radius: unset;
+  color: var(--color-brand-500);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &:after {
+    content: '\279E';
+    font-size: .857em;
+  }
+}
+
+main a.button.tertiary:hover,
+button.button.tertiary:hover {
+  color: var(--color-brand-600);
 }
 
 main .text-white a.button,
@@ -481,7 +534,7 @@ main .section {
 main > .section > div {
   max-width: 1200px;
   margin: auto;
-  padding: 0 var(--spacing-medium);
+  /* padding: 0 var(--spacing-medium); */
 }
 
 main > .section:first-of-type {
@@ -490,7 +543,7 @@ main > .section:first-of-type {
 
 @media (width >= 900px) {
   main > .section > div {
-    padding: 0 var(--spacing-big);
+    /* padding: 0 var(--spacing-big); */
   }
 }
 

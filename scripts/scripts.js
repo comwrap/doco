@@ -145,6 +145,9 @@ async function applyTemplates(doc) {
 // eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
   // hopefully forward compatible button decoration
+  setTimeout(() => {
+    decorateButtons(main);
+  }, 0);
   decorateButtons(main);
   decorateIcons(main);
   buildAutoBlocks(main);
