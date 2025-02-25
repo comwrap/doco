@@ -1,0 +1,41 @@
+/* Message */
+.message > div {
+  display: flex;
+  gap: var(--spacing-medium);
+}
+
+.message > div p {
+  margin: 0;
+}
+
+.message > div p + p {
+  margin-top: var(--spacing-small);
+}
+
+.message-note {
+  background-color: var(--color-blue-200);
+}
+
+.message-info {
+  background-color: var(--color-neutral-200);
+}
+
+.message-warning {
+  background-color: var(--color-warning-200);
+}
+
+.message-error {
+  background-color: var(--color-alert-200);
+}
+
+@media (width < 480px) {
+  .message > div {
+    flex-direction: column;
+  }
+
+  .message[class*="gap-"] {
+    > div {
+      gap: var(--spacing-medium);
+    }
+  }
+}
